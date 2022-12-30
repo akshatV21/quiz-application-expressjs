@@ -1,4 +1,4 @@
-const app = require('./app')
+const { app } = require('./app')
 const { connectToMongoDatabase } = require('./database/mongo')
 const createSocketConnection = require('./websocket/socketio')
 

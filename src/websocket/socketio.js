@@ -1,10 +1,10 @@
 const socketio = require('socket.io')
 const fs = require('fs/promises')
-const app = require('../app.js')
+const { appServer } = require('../app.js')
 const path = require('path')
 
 const createSocketConnection = () => {
-  const io = new socketio.Server(app, { cors: { origin: '*' } })
+  const io = new socketio.Server(appServer, { cors: { origin: '*' } })
 
   io.on('connection', async socket => {
     const eventsFolderPath = path.join(__dirname + '/events')
