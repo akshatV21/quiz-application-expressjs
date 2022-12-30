@@ -1,5 +1,5 @@
 const app = require('./app')
-const { connectToMongoDatabase } = require('./mongo')
+const { connectToMongoDatabase } = require('./database/mongo')
 const createSocketConnection = require('./websocket/socketio')
 
 const PORT = process.env.PORT || 8080
